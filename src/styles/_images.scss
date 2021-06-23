@@ -1,19 +1,19 @@
 @import "./mixins";
 
-  #logo {
-    height: 350px;
-    width: auto;
-    border: none;
-  }
+#logo {
+  height: 350px;
+  width: auto;
+  border: none;
+}
 
-  img {
-    padding: 20px;
-    background-color: white;
-    height: 200px;
-    width: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+img {
+  padding: 20px;
+  background-color: white;
+  height: 200px;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 
   @include md {
     height: 250px;
@@ -27,11 +27,15 @@
     height: 400px;
     width: auto;
   }
-  }
-  .actionIcon {
-    height: 40px;
-    width: auto;
-    border: none;
-    float:right;
-    padding: 10px;
-  }
+}
+
+.actionIcon {
+  height: 40px;
+  width: auto;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+}

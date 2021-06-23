@@ -16,9 +16,9 @@
           <form @submit.prevent="search">
             <div>
               <h3>Titre du livre</h3>
-              <input v-model="titleSearch" class="input-text">
+              <input v-model="titleSearch">
               <h3>Auteur</h3>
-              <input v-model="authorSearch" class="input-text">
+              <input v-model="authorSearch">
               <br>
               <br>
               <button id="search-btn">Rechercher</button>
@@ -30,7 +30,7 @@
         <div class="content">
           <div class="loading" v-if="loadState == 'loading'"></div>
           <br>
-          <div v-if="loadState == 'success'"> <h1>Résultat de recherche</h1> </div> 
+          <div v-if="loadState == 'success'"> <h1>Résultats de recherche</h1> </div> 
           <BookList v-if="loadState == 'success'"
                     :books="books"
                     :showAddBookmark="true"

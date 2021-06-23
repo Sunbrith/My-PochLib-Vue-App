@@ -3,31 +3,15 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-flex: 100%;
-      -ms-flex: 100%;
-          flex: 100%;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-@media (min-width: 992px) {
-  .flex-container {
-    -webkit-box-flex: 50%;
-        -ms-flex: 50%;
-            flex: 50%;
-    max-width: 50%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-.input-text {
+input {
   display: block;
   -webkit-box-pack: left;
       -ms-flex-pack: left;
@@ -42,6 +26,7 @@
   font-weight: 700;
   letter-spacing: 0.02em;
   line-height: 1;
+  width: calc(100% - 4em - 2px);
 }
 
 .book {
@@ -53,12 +38,23 @@
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   text-align: left;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .book {
+    width: calc(50% - 2rem);
+  }
 }
 
 .details {
   float: left;
   width: 100%;
   padding: 5px;
+}
+
+.details h1 {
+  max-width: calc(100% - 50px);
 }
 
 ul {
@@ -176,8 +172,11 @@ img {
   height: 40px;
   width: auto;
   border: none;
-  float: right;
   padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 /*********************
@@ -189,12 +188,6 @@ FLEXBOX
 html, body {
   font-family: 'Roboto', sans-serif;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 #app {

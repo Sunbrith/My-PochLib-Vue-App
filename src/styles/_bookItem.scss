@@ -1,20 +1,10 @@
 .flex-container {
   display: flex;
-  flex-direction:column;
-  flex: 100%; 
+  flex-direction: row;
   flex-wrap: wrap;
 }
 
-@media (min-width: 992px) {
-  .flex-container {
-    flex: 50%;
-    max-width: 50%;
-    flex-direction: column;
-  }
-}
- 
-
-.input-text {
+input {
   display: block;
   justify-content: left;
   padding: 1em 2em;
@@ -27,8 +17,9 @@
   font-weight: 700;
   letter-spacing: 0.02em;
   line-height: 1;
+  width: calc(100% - 4em - 2px);
 }
-  
+
 .book {
   background: #fff;
   border-radius: 2px;
@@ -37,12 +28,23 @@
   position: relative;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   text-align:left;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .book {
+    width: calc(50% - 2rem);
+  }
 }
 
 .details {
   float: left;
   width: 100%;
   padding: 5px;
+
+  h1 {
+    max-width: calc(100% - 50px);
+  }
 }
 
 ul {

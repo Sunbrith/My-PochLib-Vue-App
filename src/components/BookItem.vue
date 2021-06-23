@@ -1,5 +1,4 @@
 <template>
-<div class="flex-container">
   <div class="book">
     <div v-if="showAddBookmark">
       <img @click="onAdd"
@@ -38,7 +37,6 @@
       </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>

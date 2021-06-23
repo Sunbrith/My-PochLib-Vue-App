@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex-container">
     <BookItem v-for="book in books"
               :key="book.id"
               :book="book" 
