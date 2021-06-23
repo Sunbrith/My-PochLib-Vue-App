@@ -128,9 +128,6 @@ button:hover {
 /*********************
 BREAKPOINTS
 *********************/
-/*********************
-FLEXBOX
-*********************/
 #logo {
   height: 350px;
   width: auto;
@@ -181,9 +178,6 @@ img {
 
 /*********************
 BREAKPOINTS
-*********************/
-/*********************
-FLEXBOX
 *********************/
 html, body {
   font-family: 'Roboto', sans-serif;
