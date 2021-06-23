@@ -7,7 +7,9 @@
     <div>
       <h1>Nouveau livre </h1>
       <div>
-        <button id="add-book-btn" @click="showForm = !showForm" depressed rounded dark>Ajouter un livre</button>
+        <button v-if="!showForm" 
+                @click="showForm = !showForm" 
+                depressed rounded dark>Ajouter un livre</button>
       </div>
       <br>
       <br>
@@ -102,7 +104,7 @@ export default {
       this.authorSearch = ''
       this.loadState = ''
       this.books = []
-      this.showForm = ''
+      this.showForm = false
     },
 
     addToMyPochList(book) {
